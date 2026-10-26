@@ -1,0 +1,24 @@
+== 1/5 Creating Docker network
+== 2/5 Building and starting the backend (Flask API on port 7860)
+sha256:137888bc9ab174985d4921e5e7e17336619c3f7c01323328ab4729eacbf8754d
+fd81c5cad41db61b48caae96dd3a90c60e566c283f3344dbd9a201cf88cd5bbf
+== 3/5 Building and starting the frontend (Streamlit on port 8501)
+sha256:38d2c25d0462c1c7f4fd25a985b1e60d71c03cfd390adebc866e7eacdf323acc
+bb7f3cb327aaee4959683bff12d5d729ef46bcfd783b3dfbfc496ca01a8df64f
+== Waiting for the API to start
+== 4/5 Testing the API
+-- GET /
+Welcome to the SuperKart System
+-- POST /v1/predict (single inference)
+{"Sales":2896.61}
+
+-- POST /v1/predictbatch (batch inference)
+{"0":3561.57,"1":3221.93,"2":3871.44,"3":1317.57,"4":3737.87,"5":5110.5,"6":1909.81,"7":2438.58,"8":5345.55,"9":2083.9}
+
+== 5/5 Making port 7860 public and saving files to GitHub
+Port 7860 is now Public
+
+==================================================================
+API (forwarded URL, port 7860): https://lifeless-spooky-wand-wxrw666wp9rfqj9-7860.app.github.dev
+Streamlit app (port 8501):      https://lifeless-spooky-wand-wxrw666wp9rfqj9-8501.app.github.dev
+==================================================================
