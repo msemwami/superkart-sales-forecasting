@@ -13,7 +13,7 @@ docker run -d --name backend --network superkart-net -p 7860:7860 superkart-back
 
 echo "== 3/5 Building and starting the frontend (Streamlit on port 8501)"
 docker build -q -t superkart-frontend ./frontend
-docker run -d --name frontend --network superkart-net -p 8501:8501 superkart-frontend
+docker run -d --name frontend --network host -e BACKEND_URL=http://localhost:7860 superkart-frontend
 
 echo "== Waiting for the API to start"
 for i in $(seq 1 30); do curl -s localhost:7860/ >/dev/null && break; sleep 2; done
